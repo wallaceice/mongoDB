@@ -100,7 +100,7 @@ function notify(noteId, title, description){
 const mongodb = require('mongodb')
 const ObjectId = mongodb.ObjectId;
 const password = process.env.PASSWORD || "4Wi9saIkviR6Lhy1";
-const connectionString = `mongodb+srv://admin:${password}@cluster0.5qv4nd1.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
+const connectionString = `mongodb+srv://admin:${password}@cluster0.somdygu.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
 
 const options = { 
     useNewUrlParser: true, 
@@ -114,7 +114,7 @@ async function connectToMongoDB(){
 
     const db = client.db('myFirstDatabase');
 
-    const mensagens = db.collection('mensagens');    
+    const mensagens = db.collection('messages');    
 
     console.log(await mensagens.find({}).toArray());
 
